@@ -1,0 +1,14 @@
+<h1>投稿一覧</h1>
+
+<%= link_to '新規投稿', lists_new_path %>
+
+<!-- @listsにコントローラで代入した内容がそのまま入っている -->
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span><%= list.title %></span>
+
+<%= link_to '詳細', list_path(list.id) %>
+
+<% end %>
+

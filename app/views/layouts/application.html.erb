@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- フラッシュメッセージ -->
+    <div class="container">
+      <main style="margin-top: 25px; margin-bottom: 80px;">
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
