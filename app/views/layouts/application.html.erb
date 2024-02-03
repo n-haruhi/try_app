@@ -6,17 +6,38 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/e99d188784.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <!-- フラッシュメッセージ -->
-    <div class="container">
-      <main style="margin-top: 25px; margin-bottom: 80px;">
-        <p id="notice"><%= notice %></p>
-        <%= yield %>
-      </main>
-    </div>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">All Lists</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Top</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/lists">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/lists/new">NewPost</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main style="margin-top: 25px; margin-bottom: 80px;">
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
+    </main>
   </body>
 </html>
